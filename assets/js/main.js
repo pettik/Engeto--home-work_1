@@ -1,138 +1,148 @@
-/*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+/*==================== UKAŽ MOBILNÍ MENU PŘI KLIKNUTÍ NA TLAČÍTKO TOGGLE ====================*/
+const ukazMenu = (toggleId, navId) => {
+   const toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
 
-  // Validate that variables exist
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      // We add the show-menu class to the div tag with the nav__menu class
-      nav.classList.toggle('show-menu');
-    });
-  }
+   // Ověř, že proměnné existují
+   if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+         // Přidáme třídu 'ukaz-menu' k divu s třídou ".nav__menu"
+         nav.classList.toggle('ukaz-menu');
+      });
+   }
 };
-showMenu('nav-toggle', 'nav-menu');
+ukazMenu('nav-toggle', 'nav-menu');
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link');
+/*==================== SKRYJ MOBILNÍ MENU ====================*/
+const navLink = document.querySelectorAll('.nav__odkaz');
 
 function linkAction() {
-  const navMenu = document.getElementById('nav-menu');
-  // When we click on each nav__link, we remove the show-menu class
-  navMenu.classList.remove('show-menu');
+   const navMenu = document.getElementById('nav-menu');
+   // Když klikneme na každý ".nav__odkaz", skryjeme třídu ".ukaz-menu"
+   navMenu.classList.remove('ukaz-menu');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+/*==================== Při SKROLOVÁNÍ -> Přepínání aktivního linku v MENU  ====================*/
 function scrollActive() {
-  const scrollY = window.pageYOffset;
+   const scrollY = window.pageYOffset;
 
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    const sectionId = current.getAttribute('id');
-    const navLink = document.querySelector(
-      `.nav__list a[href="#${sectionId}"]`
-    );
+   sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 50;
+      const sectionId = current.getAttribute('id');
+      const navLink = document.querySelector(
+         `.nav__polozka a[href="#${sectionId}"]`
+      );
 
-    if (navLink) {
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLink.classList.add('active-link');
-      } else {
-        navLink.classList.remove('active-link');
+      if (navLink) {
+         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLink.classList.add('aktivni-odkaz');
+         } else {
+            navLink.classList.remove('aktivni-odkaz');
+         }
       }
-    }
-  });
+   });
 }
 
-// Get all sections with an 'id' attribute
+
+// Získání všech sekcí s atributem ID
 const sections = document.querySelectorAll('section[id]');
 
-// Attach the scrollActive function to the 'scroll' event
+// Připojíme funkci "scrollActive()" k eventu "skrolnutí"
 window.addEventListener('scroll', scrollActive);
 
-/*==================== SHOW SCROLL TOP ====================*/
+/*==================== UKAŽ SCROLL TOP ====================*/
 function scrollTop() {
-  const scrollTop = document.getElementById('scroll-top');
-  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 200) scrollTop.classList.add('show-scroll');
-  else scrollTop.classList.remove('show-scroll');
+   const scrollTop = document.getElementById('scroll-top');
+   // Když zasklolujeme více než 200 z výšky viewportu, přidáme třídu "ukaz-scroll" k elementu s id "#scroll-top"
+   if (this.scrollY >= 200) scrollTop.classList.add('ukaz-scroll');
+   else scrollTop.classList.remove('ukaz-scroll');
 }
 window.addEventListener('scroll', scrollTop);
 
-/*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button');
-const darkTheme = 'dark-theme';
-const iconTheme = 'bx-sun';
+/*==================== SVĚTLÝ/TMAVÝ REŽÍM ====================*/
+const zmenaModuTlacitko = document.getElementById('zmena-modu');
+const tmavyRezim = 'tmavy-rezim';
+const ikonaModu = 'bx-sun';
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
+// Načtení režimu (pokud uživatel vybral)
+const vybranyRezim = localStorage.getItem('vybrany-rezim');
+const vybranaIkona = localStorage.getItem('vybrana-ikona');
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun';
+// Aktuální režim, který je, získáme ověřením "body" elementu a jeho třídy ".tmavy-rezim"
+const ziskejAktualniRezim = () =>
+   document.body.classList.contains(tmavyRezim) ? 'tmavy' : 'svetly';
+const ziskejAktualniIkonu = () =>
+   zmenaModuTlacitko.classList.contains(ikonaModu) ? 'bx-moon' : 'bx-sun';
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
-    darkTheme
-  );
-  themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](
-    iconTheme
-  );
+// Ověřujeme, zda uživatel dříve zvolil téma
+if (vybranyRezim) {
+   // Pokud je ověření splněno, zeptáme se, jaký byl režim, abychom věděli, zda jsme aktivovali nebo deaktivovali tmavý režim
+   document.body.classList[vybranyRezim === 'tmavy' ? 'add' : 'remove'](
+      tmavyRezim
+   );
+   zmenaModuTlacitko.classList[vybranaIkona === 'bx-moon' ? 'add' : 'remove'](
+      ikonaModu
+   );
 }
 
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-  // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
-  localStorage.setItem('selected-theme', getCurrentTheme());
-  localStorage.setItem('selected-icon', getCurrentIcon());
+// Aktivace / deaktivace režimu ručně pomocí tlačítka
+zmenaModuTlacitko.addEventListener('click', () => {
+   // Přidat nebo odebrat tmavý režim a ikonu
+   document.body.classList.toggle(tmavyRezim);
+   zmenaModuTlacitko.classList.toggle(ikonaModu);
+   // Uložíme do "localStorage" nastavení vybraného motivu/režimu pro další načtení webu
+   localStorage.setItem('vybrany-rezim', ziskejAktualniRezim());
+   localStorage.setItem('vybrana-ikona', ziskejAktualniIkonu());
 });
 
-/*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
-function scaleCv() {
-  document.body.classList.add('scale-cv');
+/*==================== Přidej styl "zmeni-cv" k "body", aby se vešlo na formát A4 ====================*/
+function zmensiCv() {
+   document.body.classList.add('zmensi-cv');
 }
-/*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
-function removeScale() {
-  document.body.classList.remove('scale-cv');
+/*==================== Odstraň osekaný formát z A4 po generování PDF ====================*/
+function odstranZmenseni() {
+   document.body.classList.remove('zmensi-cv');
 }
 
-/*==================== GENERATE PDF ====================*/
-// PDF generated area
-let areaCv = document.getElementById('area-cv');
+/*==================== GENERUJ PDF ====================*/
+// Proměnné pro práci s generováním PDF
+let oblastCv = document.getElementById('oblast-cv');
 let resumeButton = document.getElementById('resume-button');
 
-// Html2pdf options
-let opt = {
-  margin: 0,
-  filename: 'myResume.pdf',
-  image: { type: 'jpeg', quality: 0.98 },
-  html2canvas: { scale: 4 },
-  jsPDF: { format: 'a4', orientation: 'portrait' },
+// Html2pdf nastavení možných parametrů
+let moznosti = {
+   margin: 0,
+   filename: 'Bednarski_Petr-CV.pdf',
+   image: {
+      type: 'jpeg',
+      quality: 0.98
+   },
+   html2canvas: {
+      scale: 4
+   },
+   jsPDF: {
+      format: 'a4',
+      orientation: 'portrait'
+   },
 };
 
-// Function to call areaCv and Html2Pdf options
-function generateResume() {
-  html2pdf(areaCv, opt);
+// Funkce generujResume s parametry (oblastCV a možnostmi generování)
+function generujResume() {
+   html2pdf(oblastCv, moznosti);
 }
 
-// When the button is clicked, it executes the three functions
 
+//  Když je kliknuto na tlačítko "Generuj PDF", spustí se 3 oddělené funkce
 resumeButton.addEventListener('click', () => {
-  // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
-  scaleCv();
 
-  // 2. The PDF is generated
-  generateResume();
+   // 1. Třída "zmeni-cv" ke přidána k elementu "body", tím se odstraní přebytečné mezery
+   zmensiCv();
 
-  // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
-  setTimeout(removeScale, 5000);
+   // 2. PDF je generováno
+   generujResume();
+
+   // 3. Třída ".zmensi-cv" je odstraněna z "body" elementu po 5 sekundách díky "setTimout" funkci
+   setTimeout(odstranZmenseni, 5000);
 });
