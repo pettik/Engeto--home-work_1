@@ -1,398 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--========== BOX ICONS ==========-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
-    <!--========== CSS ==========-->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Responsive resume cv</title>
-  </head>
-  <body>
-    <!--========== HEADER ==========-->
-    <header class="l-header" id="header">
-      <nav class="nav bd-container">
-        <a href="#" class="nav__logo">Smith</a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
-                <i class="bx bx-home nav__icon"></i> Home
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#profile" class="nav__link">
-                <i class="bx bx-user nav__icon"></i> Profile
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#education" class="nav__link">
-                <i class="bx bx-book nav__icon"></i> Education
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="bx bx-receipt nav__icon"></i> Skills
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#experience" class="nav__link">
-                <i class="bx bx-briefcase-alt nav__icon"></i> Experience
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#certificates" class="nav__link">
-                <i class="bx bx-award nav__icon"></i> Certificattes
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#references" class="nav__link">
-                <i class="bx bx-link-external nav__icon"></i> References
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-grid-alt"></i>
-        </div>
-      </nav>
-    </header>
-    <main class="l-main bd-container">
-      <!-- All elements within this div, is generated in PDF -->
-      <div class="resume" id="area-cv">
-        <div class="resume__left">
-          <!--========== HOME ==========-->
-          <section class="home" id="home">
-            <!-- Theme change button -->
-            <div class="home__container section bd-grid">
-              <div class="home__data bd-grid">
-                <img
-                  src="assets/img/perfil.jpg"
-                  alt="perfil image"
-                  class="home__img"
-                />
-                <h1 class="home__title">Smith <b> matthew</b></h1>
-                <h3 class="home__profession">Web developer</h3>
-                <div>
-                  <a
-                    download=""
-                    href="assets/pdf/ResumeCv.pdf"
-                    class="home__button-movil"
-                    >Download</a
-                  >
-                </div>
-              </div>
-              <div class="home__adress bd-grid">
-                <span class="home__information">
-                  <i class="bx bx-map home__icon"></i> Av. Boliar #123 Lima-Peru
-                </span>
-                <span class="home__information">
-                  <i class="bx bx-envelope home__icon"></i> user@email.cz
-                </span>
-                <span class="home__information">
-                  <i class="bx bx-phone home__icon"></i> 999-888-777
-                </span>
-              </div>
+<html lang="cs">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!--========== Sada BOXicons ==========-->
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+         />
+      <!--========== Moje vlastní CSS ==========-->
+      <link rel="stylesheet" href="assets/css/styles.css" />
+      <title>Petr Bednarski | CV</title>
+   </head>
+   <body>
+      <!--========== MENU - Hlavička ==========-->
+      <header class="trida-hlavicka" id="hlavicka">
+         <nav class="nav body-kontejner">
+            <a href="#" class="nav__logo">Ing. Petr Bednarski</a>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__seznam">
+                  <li class="nav__polozka">
+                     <a href="#home" class="nav__odkaz aktivni-odkaz">
+                     <i class="bx bx-home nav__ikona"></i> Domů
+                     </a>
+                  </li>
+                  <li class="nav__polozka">
+                     <a href="#profile" class="nav__odkaz">
+                     <i class="bx bx-user nav__ikona"></i> O mně
+                     </a>
+                  </li>
+                  <li class="nav__polozka">
+                     <a href="#vzdelani" class="nav__odkaz">
+                     <i class="bx bx-book nav__ikona"></i> Vzdělání
+                     </a>
+                  </li>
+                  <li class="nav__polozka">
+                     <a href="#dovednosti" class="nav__odkaz">
+                     <i class="bx bx-receipt nav__ikona"></i> Dovednosti
+                     </a>
+                  </li>
+                  <li class="nav__polozka">
+                     <a href="#pracovniZkusenosti" class="nav__odkaz">
+                     <i class="bx bx-briefcase-alt nav__ikona"></i> Pracovní zkušenosti
+                     </a>
+                  </li>
+                  <li class="nav__polozka">
+                     <a href="#certifikaty" class="nav__odkaz">
+                     <i class="bx bx-award nav__ikona"></i> Certifikáty
+                     </a>
+                  </li>
+               </ul>
             </div>
-            <!-- Theme change button -->
-            <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
-            <!-- Button to generate and download the pdf. Available for desktop. -->
-            <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>
-          </section>
-
-
-
-
-          <!--========== SOCIAL ==========-->
-          <section class="social section" id="social">
-            <h2 class="section-title">SOCIAL</h2>
-            <div class="social__container bd-grid">
-              <a href="#" target="_blank" class="social__link">
-                <i class="social__icon bx bxl-linkedin-square"></i> @smithmat
-              </a>
-              <a href="#" target="_blank" class="social__link">
-                <i class="social__icon bx bxl-facebook"></i> @smithmat
-              </a>
-              <a href="#" target="_blank" class="social__link">
-                <i class="social__icon bx bxl-instagram"></i> @smithmat
-              </a>
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="bx bx-grid-alt"></i>
             </div>
-          </section>
-          <!--========== PROFILE ==========-->
-          <section class="profile section" id="profile">
-            <h2 class="section-title">Profile</h2>
-            <p class="profile__description">
-              I am a person, responsible with their work during working hours.
-              Finish various technical and higher studies at large universities.
-              I have several years of experience and achievements in the labor
-              field.
-            </p>
-          </section>
-          <!--========== EDUCATION ==========-->
-          <section class="education section" id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="education__container bd-grid">
-              <div class="education__content">
-                <div class="education__time">
-                  <span class="education__rounder"></span>
-                  <span class="education__line"></span>
-                </div>
-
-                <div class="education__data bd-grid">
-                  <h3 class="education__title">MASTER OF DESIGN</h3>
-                  <span class="education__studies">University of Studies</span>
-                  <span class="education__year">2010 - 2015</span>
-                </div>
-              </div>
-              <div class="education__content">
-                <div class="education__time">
-                  <span class="education__rounder"></span>
-                  <span class="education__line"></span>
-                </div>
-
-                <div class="education__data bd-grid">
-                  <h3 class="education__title">WEB DEVELOPER</h3>
-                  <span class="education__studies">Institute Studies</span>
-                  <span class="education__year">2016 - 2019</span>
-                </div>
-              </div>
-              <div class="education__content">
-                <div class="education__time">
-                  <span class="education__rounder"></span>
-                  <!-- <span class="education__line"></span> -->
-                </div>
-
-                <div class="education__data bd-grid">
-                  <h3 class="education__title">MASTER IN UI/UX</h3>
-                  <span class="education__studies">Institute Studies</span>
-                  <span class="education__year">2019 - 2021</span>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!--========== SKILLS  ==========-->
-          <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__content bd-grid">
-              <ul class="skills__data">
-                <li class="skills__name">
-                  <span class="skills__circle"></span> HTML
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span> CSS
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span> Sass
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span> JavaScript
-                </li>
-              </ul>
-              <ul class="skills__data">
-                <li class="skills__name">
-                  <span class="skills__circle"></span> Angular
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span> Firebase
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span> React
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-        <div class="resume__right">
-          <!--========== EXPERIENCE ==========-->
-          <section class="experience section" id="experience">
-
-              <h2 class="section-title">Experience</h2>
-
-              <div class="experience__container bd-grid">
-                <div class="experience__content">
-                  <div class="experience__time">
-                    <span class="experience__rounder"></span>
-                    <div class="experience__line"></div>
+         </nav>
+      </header>
+      <main class="trida-main body-kontejner">
+         <!-- Kód pod touto poznámkou se bude genertovat do PDF -->
+         <div class="resume" id="oblast-cv">
+            <div class="resume__levaStrana">
+               <!--========== DOMŮ ==========-->
+               <section class="home" id="home">
+                  <!-- Změna motivu - tlačítko -->
+                  <div class="home__kontejner section grid">
+                     <div class="home__data grid">
+                        <img
+                           src="assets/img/photo.jpg"
+                           alt="Profilová fotka"
+                           class="home__obrazek"
+                           />
+                        <h1 class="home__titulek">Ing. Petr <b>BEDNARSKI</b></h1>
+                        <h3 class="home__profese"><span>(budoucí)</span> Front-end Developer</h3>
+                        <div>
+                           <a
+                              download=""
+                              href="assets/pdf/Bednarski_Petr-CV.pdf"
+                              class="home__tlacitko-cv"
+                              >Stáhnout CV</a
+                              >
+                        </div>
+                     </div>
+                     <div class="home__boxInfo grid">
+                        <span class="home__udaj">
+                        <i class="bx bx-map home__ikona"></i> Jeseník, Česká Republika
+                        </span>
+                        <span class="home__udaj">
+                        <i class="bx bx-envelope home__ikona"></i><a href="mailto:petrbednarski@seznam.cz">petrbednarski@seznam.cz</a>
+                        </span>
+                        <span class="home__udaj">
+                        <i class="bx bxs-envelope home__ikona" ></i> <a href="mailto:petrbednarski@gmail.com">petrbednarski@gmail.com</a>
+                        </span>
+                     </div>
                   </div>
-
-                  <div class="experience__data bd-grid">
-                    <h3 class="experience__title">MASTER OF DESIGN</h3>
-                    <span class="experience__company"
-                      >From 2013 to 2015 | Tech Soft</span
-                    >
-                    <p class="experience__description">
-                      Work in this company dedication the best responsibility in
-                      the area that corresponds, delivering the best results for
-                      the company and improving productivity.
-                    </p>
+                  <!-- Tlačítko pro změnu režimu: světlý/tmavý -->
+                  <i class="bx bx-moon zmena-modu" title="Režim" id="zmena-modu"></i>
+                  <!-- Tlačítko pro DESKTOP pohled, pro generování a stažení PDF -->
+                  <i class="bx bx-download generuj-pdf" title="Generuj PDF" id="resume-button"></i>
+               </section>
+               <!--========== SOCIÁLNÍ SÍTĚ ==========-->
+               <section class="social section" id="social">
+                  <h2 class="section-title">SOCIALNÍ SÍTĚ</h2>
+                  <div class="social__kontejner grid">
+                     <a href="https://cz.linkedin.com/in/petr-bednarski-2b433a167" target="_blank" class="social__odkaz">
+                     <i class="social__ikona bx bxl-linkedin-square"></i> petr-bednarski-2b433a167
+                     </a>
+                     <a href="https://github.com/pettik" target="_blank" class="social__odkaz">
+                     <i class='social__ikona bx bxl-github'></i> @pettik
+                     </a>
+                     <a href="https://discord.com/users/565302036766392351" target="_blank" class="social__odkaz">
+                     <i class='social__ikona bx bxl-discord'></i> @pettik_
+                     </a>
                   </div>
-                </div>
-                <div class="experience__content">
-                  <div class="experience__time">
-                    <span class="experience__rounder"></span>
-                    <div class="experience__line"></div>
-                  </div>
-
-                  <div class="experience__data bd-grid">
-                    <h3 class="experience__title">UI/UX DESIGN AREA</h3>
-                    <span class="experience__company"
-                      >From 2017 to 2019 | Adobe Inc.
-                    </span>
-                    <p class="experience__description">
-                      Work in this company dedication the best responsibility in
-                      the area that corresponds, delivering the best results for
-                      the company and improving productivity.
-                    </p>
-                  </div>
-                </div>
-                <div class="experience__content">
-                  <div class="experience__time">
-                    <span class="experience__rounder"></span>
-                    <!-- <div class="experience__line"></div> -->
-                  </div>
-
-                  <div class="experience__data bd-grid">
-                    <h3 class="experience__title">
-                      MOBILE APPLICATION DEVELOPER
-                    </h3>
-                    <span class="experience__company"
-                      >From 2019 to 2021 | App Tech</span
-                    >
-                    <p class="experience__description">
-                      Work in this company dedication the best responsibility in
-                      the area that corresponds, delivering the best results for
-                      the company and improving productivity.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-          </section>
-          <!--========== CERTIFICATES ==========-->
-          <section class="certificate section" id="certificates">
-            <h2 class="section-title">Certificates</h2>
-
-            <div class="certificate__container bd-grid">
-              <div class="certificate__content">
-                <h3 class="certificate__title">
-                  Certificate for compliacne in the work area (2012)</h3>
-                  <p class="certificate__description">
-                    For meeting the expectations of leading the team to work the
-                    specified tasks in the labor field.
+               </section>
+               <!--========== Krátké shrnutí - O MNĚ ==========-->
+               <section class="profile section" id="profile">
+                  <h2 class="section-title">O mně</h2>
+                  <p class="profile__popis">
+                     Jako absolvent programu Učitelství IT jsem  dobře porozuměl technickým i&nbsp;pedagogickým aspektům výuky v&nbsp;IT. I&nbsp;když jsem se nakonec rozhodl nepokračovat v&nbsp;učitelské kariéře, program mi poskytl cenné dovednosti v oblasti komunikace, prezentace a důkladné znalosti IT. Po&nbsp;studiích jsem většinou pracoval jako IT&nbsp;technik/administrátor. V&nbsp;současné době se zaměřuji na&nbsp;vzdělání <strong>Front-end vývojáře v JavaScriptu</strong>, kterou hodlám nadále rozvíjet.
                   </p>
-                </h3>
-              </div>
-              <div class="certificate__content">
-                <h3 class="certificate__title">
-                  Certificate of attendance on computer technology (2019)</h3>
-                  <p class="certificate__description">
-                    For meeting the expectations of leading the team to work the
-                    specified tasks in the labor field.
-                  </p>
-                </h3>
-              </div>
-              <div class="certificate__content">
-                <h3 class="certificate__title">
-                  Achivement medal for pdouctivity excellence during the year</h3>
-                  (2022)
-                  <p class="certificate__description">
-                    For meeting the expectations of leading the team to work the
-                    specified tasks in the labor field.
-                  </p>
-                </h3>
-              </div>
+               </section>
+               <!--========== VZDĚLÁNÍ ==========-->
+               <section class="vzdelani section" id="vzdelani">
+                  <h2 class="section-title">Vzdělání</h2>
+                  <div class="vzdelani__kontejner grid">
+                     <div class="vzdelani__obsah">
+                        <div class="vzdelani__casovaOsa">
+                           <span class="vzdelani__puntik"></span>
+                           <span class="vzdelani__linka"></span>
+                        </div>
+                        <div class="vzdelani__data grid">
+                           <h3 class="vzdelani__titulek">Informační technologie</h3>
+                           <span class="vzdelani__skola">VOŠ a SPŠ Šumperk</span>
+                           <span class="vzdelani__rok">2007 - 2011</span>
+                        </div>
+                     </div>
+                     <div class="vzdelani__obsah">
+                        <div class="vzdelani__casovaOsa">
+                           <span class="vzdelani__puntik"></span>
+                           <span class="vzdelani__linka"></span>
+                        </div>
+                        <div class="vzdelani__data grid">
+                           <h3 class="vzdelani__titulek">Informační technologie v administrativě</h3>
+                           <span class="vzdelani__skola">Univerzita Tomáše Bati ve Zlíně</span>
+                           <span class="vzdelani__rok">2012 - 2015</span>
+                        </div>
+                     </div>
+                     <div class="vzdelani__obsah">
+                        <div class="vzdelani__casovaOsa">
+                           <span class="vzdelani__puntik"></span>
+                           <!-- <span class="vzdelani__linka"></span> -->
+                        </div>
+                        <div class="vzdelani__data grid">
+                           <h3 class="vzdelani__titulek">Učitelství informatiky pro SŠ</h3>
+                           <span class="vzdelani__skola">Univerzita Tomáše Bati ve Zlíně</span>
+                           <span class="vzdelani__rok">2015 - 2018</span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!--========== DOVEDNOSTI  ==========-->
+               <section class="dovednosti section" id="dovednosti">
+                  <h2 class="section-title">Dovednosti</h2>
+                  <div class="dovednosti__obsah grid">
+                     <ul class="dovednosti__data">
+                        <li class="dovednosti__nazev">
+                           <span class="dovednosti__puntik"></span> HTML
+                        </li>
+                        <li class="dovednosti__nazev">
+                           <span class="dovednosti__puntik"></span> CSS
+                        </li>
+                        <li class="dovednosti__nazev">
+                           <span class="dovednosti__puntik"></span> JavaScript
+                        </li>
+                     </ul>
+                     <ul class="dovednosti__data">
+                        <li class="dovednosti__nazev">
+                           <span class="dovednosti__puntik"></span> Photoshop
+                        </li>
+                        <li class="dovednosti__nazev">
+                           <span class="dovednosti__puntik"></span> CorelDraw
+                        </li>
+                        <li class="dovednosti__nazev">
+                           <span class="dovednosti__puntik"></span> Sony Vegas
+                        </li>
+                     </ul>
+                  </div>
+               </section>
             </div>
-          </section>
-          <!--========== REFERENCES ==========-->
-          <section class="references section" id="references">
-            <h2 class="section-title">References</h2>
-            <div class="references__container bd-grid">
-              <div class="references__content bd-grid">
-                <span class="references__subtitle">Sr. Director</span>
-                <h3 class="references__title">Mr. Clay Doe</h3>
-                <ul class="references__contact">
-
-                  <li>Phone: 999-777-666</li>
-                  <li>E-mail: user@email.com</li>
-                </ul>
-              </div>
-              <div class="references__content bd-grid">
-                <span class="references__subtitle">Mag. Developer</span>
-                <h3 class="references__title">Mr. Robbinson Bass</h3>
-                <ul class="references__contact">
-
-                  <li>Phone: 999-777-666</li>
-                  <li>E-mail: user@email.com</li>
-                </ul>
-              </div>
-              <div class="references__content bd-grid">
-                <span class="references__subtitle">Sr. Director</span>
-                <h3 class="references__title">Mr. Clay Doe</h3>
-                <ul class="references__contact">
-
-                  <li>Phone: 999-777-666</li>
-                  <li>E-mail: user@email.com</li>
-                </ul>
-              </div>
+            <div class="resume__pravaStrana">
+               <!--========== PRACOVNÍ ZKUŠENOSTI ==========-->
+               <section class="pracovniZkusenosti section" id="pracovniZkusenosti">
+                  <h2 class="section-title">Pracovní zkušenosti</h2>
+                  <div class="pracovniZkusenosti__kontejner grid">
+                     <div class="pracovniZkusenosti__obsah">
+                        <div class="pracovniZkusenosti__casovaOsa">
+                           <span class="pracovniZkusenosti__puntik"></span>
+                           <div class="pracovniZkusenosti__linka"></div>
+                        </div>
+                        <div class="pracovniZkusenosti__data grid">
+                           <h3 class="pracovniZkusenosti__titulek">
+                              IT specialista
+                           </h3>
+                           <span class="pracovniZkusenosti__dobaAspolecnost"
+                              >leden 2016 - září 2018 | Tesco SW a.s.</span
+                              >
+                           <p class="pracovniZkusenosti__popis">             
+                              Automatizovaná instalace klientských operačních systému MS Windows, rozvoj automatizovaných instalací, údržba klientských stanic SW/HW, stěhování HW, evidence SW/HW, inventura HW, kybernetická bezpečnost – kontrola antivirových systémů, uživatelský helpdesk s běžnými IT problémy.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="pracovniZkusenosti__obsah">
+                        <div class="pracovniZkusenosti__casovaOsa">
+                           <span class="pracovniZkusenosti__puntik"></span>
+                           <div class="pracovniZkusenosti__linka"></div>
+                        </div>
+                        <div class="pracovniZkusenosti__data grid">
+                           <h3 class="pracovniZkusenosti__titulek">
+                              Project executive
+                           </h3>
+                           <span class="pracovniZkusenosti__dobaAspolecnost"
+                              >červen 2020 - leden 2021 | Adbros s.r.o.</span
+                              >
+                           <p class="pracovniZkusenosti__popis">
+                              Práce v týmu s programátory, grafiky, dalšími exekutivci a svým nadřízeným. Mým úkolem bylo komunikovat s klientem, kontrolovat a aktualizovat články na webu a vytvářet jednoduché reporty.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="pracovniZkusenosti__obsah">
+                        <div class="pracovniZkusenosti__casovaOsa">
+                           <span class="pracovniZkusenosti__puntik"></span>
+                           <div class="pracovniZkusenosti__linka"></div>
+                        </div>
+                        <div class="pracovniZkusenosti__data grid">
+                           <h3 class="pracovniZkusenosti__titulek">IT administrátor</h3>
+                           <span class="pracovniZkusenosti__dobaAspolecnost"
+                              >březen 2021 - duben 2021 | MUNI Brno
+                           </span>
+                           <p class="pracovniZkusenosti__popis">
+                              Zajištění IT podpory a správy infrastruktury na Univerzitním kampusu Bohunice na Masarykově univerzitě v Brně.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="pracovniZkusenosti__obsah">
+                        <div class="pracovniZkusenosti__casovaOsa">
+                           <span class="pracovniZkusenosti__puntik"></span>
+                           <!-- <div class="pracovniZkusenosti__linka"></div> -->
+                        </div>
+                        <div class="pracovniZkusenosti__data grid">
+                           <h3 class="pracovniZkusenosti__titulek">ICT Referent</h3>
+                           <span class="pracovniZkusenosti__dobaAspolecnost"
+                              >duben 2021 - současnost | Státní správa</span
+                              >
+                           <p class="pracovniZkusenosti__popis">
+                              Práce ve státní správě na pozici ICT referenta obsahuje zajištění správy a udržení funkčnosti informační a komunikační infrastruktury i informačních systémů pro optimální chod organizace.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!--========== CERTIFIKÁTY ==========-->
+               <section class="certifikaty section" id="certifikaty">
+                  <h2 class="section-title">Certifikáty</h2>
+                  <div class="certifikaty__kontejner grid">
+                     <div class="certifikaty__obsah">
+                        <h3 class="certifikaty__titulek">
+                           UDEMY Online kurz: The Complete JavaScript Course 2023: From Zero to Expert! (listopad 2023)
+                        </h3>
+                        <p class="certifikaty__popis">
+                           Online vzdělávací kurz v angličtině na portálu Udemy.com týkající se základního i pokročilejšího JavaScriptu.
+                           <br>Instruktor: Jonas Schmedtmann
+                        </p>
+                        </h3>
+                     </div>
+                     <div class="certifikaty__obsah">
+                        <h3 class="certifikaty__titulek">
+                           Rekvalifikační kurz: Programátor WWW aplikací v JavaScriptu (červenec 2023)
+                        </h3>
+                        <p class="certifikaty__popis">
+                           Kombinovaný (prezenční/distanční) rekvalifikační kurz na 3 měsíce přes Úřad práce u společnosti IT NETWORK v Praze, s obsahem 121 hodin (41 hodin prezenční a 80 online e-learningu)
+                        </p>
+                        </h3>
+                     </div>
+                     <div class="certifikaty__obsah">
+                        <h3 class="certifikaty__titulek">
+                           UDEMY Online kurz: CSS - The Complete Guide 2021 (srpen 2021)
+                        </h3>
+                        <p class="certifikaty__popis">
+                           Online vzdělávací kurz v angličtině na portálu Udemy.com ohledně HTML a CSS stylování.
+                           <br>Instruktoři: Maxmilian Schwarzmüller, Manuel Lorenz
+                        </p>
+                        </h3>
+                     </div>
+                     <div class="certifikaty__obsah">
+                        <h3 class="certifikaty__titulek">
+                           UDEMY Online kurz: Modern HTML & CSS From The Beginning (červenec 2020)
+                        </h3>
+                        <p class="certifikaty__popis">
+                           Online vzdělávací kurz v angličtině na portálu Udemy.com ohledně HTML a CSS stylování. <br>Instruktor: Brad Traversy
+                        </p>
+                        </h3>
+                     </div>
+                  </div>
+               </section>
+               <!--========== JAZYKY ==========-->
+               <section class="jazyky section">
+                  <h2 class="section-title">Jazyky</h2>
+                  <div class="jazyky__kontejner">
+                     <ul class="jazyky__obsah grid">
+                        <li class="jazyky__nazev">
+                           <span class="jazyky__puntik"></span> Čeština
+                        </li>
+                        <li class="jazyky__nazev">
+                           <span class="jazyky__puntik"></span> Angličtina
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <!--========== ZÁJMY ==========-->
+               <section class="zajmy section">
+                  <h2 class="section-title">Zájmy & koníčky</h2>
+                  <div class="zajmy__kontejner grid">
+                     <div class="zajmy__obsah">
+                        <i class='bx bxs-graduation zajmy__ikona'></i>
+                        <span class="zajmy__nazev">Samostudium</span>
+                     </div>
+                     <div class="zajmy__obsah">
+                        <i class="bx bx-dumbbell zajmy__ikona"></i>
+                        <span class="zajmy__nazev">Posilování</span>
+                     </div>
+                     <div class="zajmy__obsah">
+                        <i class="bx bxs-plane-alt zajmy__ikona"></i>
+                        <span class="zajmy__nazev">Cestování</span>
+                     </div>
+                     <div class="zajmy__obsah">
+                        <i class="bx bx-book zajmy__ikona"></i>
+                        <span class="zajmy__nazev">Četba</span>
+                     </div>
+                  </div>
+               </section>
             </div>
-          </section>
-          <!--========== LANGUAGES ==========-->
-          <section class="languages section">
-            <h2 class="section-title">Languages</h2>
-
-            <div class="languages__container">
-              <ul class="languages__content bd-grid">
-                <li class="languages__name">
-                  <span class="languages__circle"></span> Spanish
-                </li>
-                <li class="languages__name">
-                  <span class="languages__circle"></span> English
-                </li>
-                <li class="languages__name">
-                  <span class="languages__circle"></span> French
-                </li>
-              </ul>
-            </div>
-          </section>
-          <!--========== INTERESTS ==========-->
-          <section class="interests section">
-            <h2 class="section-title">Interests</h2>
-
-            <div class="interests__container bd-grid">
-              <div class="interests__content">
-                <i class="bx bx-headphone interests__icon"></i>
-                <span class="interests__name">Music</span>
-              </div>
-              <div class="interests__content">
-                <i class="bx bxs-plane-alt interests__icon"></i>
-                <span class="interests__name">Travel</span>
-              </div>
-              <div class="interests__content">
-                <i class="bx bx-book interests__icon"></i>
-                <span class="interests__book">Read</span>
-              </div>
-              <div class="interests__content">
-                <i class="bx bx-dumbbell interests__icon"></i>
-                <span class="interests__name">Fitness</span>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
-    <!--========== SCROLL TOP ==========-->
-
-    <a href="#" class="scrolltop" id="scroll-top">
-      <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
-    </a>
-    <!--========== HTML2PDF ==========-->
-    <script src="assets/js/html2pdf.bundle.min.js"></script>
-    <!--========== MAIN JS ==========-->
-    <script src="assets/js/main.js"></script>
-  </body>
+         </div>
+      </main>
+      <!--========== SCROLLUJ NAHORU ==========-->
+      <a href="#" class="scrolltop" id="scroll-top">
+      <i class="bx bx-up-arrow-alt scrolltop__ikona"></i>
+      </a>
+      <!--========== HTML2PDF ==========-->
+      <script src="assets/js/html2pdf.bundle.min.js"></script>
+      <!--========== MAIN JS ==========-->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
