@@ -11,7 +11,7 @@
 	--barva-textu-light: #797979;
 	--barva-kontejneru: #fbfbfb;
 	--barva-kontejneru-alt: #ebebeb;
-	--body-color: #fdfdfd;
+	--barva-body: #fdfdfd;
 
 	/*========== PÍSMO ==========*/
 	--body-font: 'Open Sans', sans-serif;
@@ -53,7 +53,7 @@ body.tmavy-rezim {
 	--barva-textu: #bebebe;
 	--barva-kontejneru: #222;
 	--barva-kontejneru-alt: #171515;
-	--body-color: #2c2c2c;
+	--barva-body: #2c2c2c;
 }
 
 /*========== Tlačítko pro tmavý/světlý režim ==========*/
@@ -187,7 +187,7 @@ body {
 	padding: 0;
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
-	background-color: var(--body-color);
+	background-color: var(--barva-body);
 	color: var(--barva-textu);
 }
 
@@ -253,7 +253,7 @@ img {
 	bottom: 0;
 	left: 0;
 	z-index: var(--z-fixed);
-	background-color: var(--body-color);
+	background-color: var(--barva-body);
 	box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
 	transition: 0.3s;
 }
@@ -273,7 +273,7 @@ img {
 		left: 0;
 		width: 100%;
 		padding: 2rem 1.5rem;
-		background-color: var(--body-color);
+		background-color: var(--barva-body);
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 		border-radius: 1rem 1rem 0 0;
 		z-index: var(--z-fixed);
