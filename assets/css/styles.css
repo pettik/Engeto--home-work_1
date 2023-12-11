@@ -1,30 +1,30 @@
 /*===== GOOGLE FONTS =====*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;800&display=swap');
 
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --title-color: #0b0a0a;
-  --text-color: #403a3a;
-  --text-color-light: #707070;
-  --container-color: #fafafa;
-  --container-color-alt: #f0efef;
-  --body-color: #fcfcfc;
+  --barva-titulku: #090909;
+  --barva-textu: #393b3b;
+  --barva-textu-light: #797979;
+  --barva-kontejneru: #fbfbfb;
+  --barva-kontejneru-alt: #ebebeb;
+  --body-color: #fdfdfd;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.813rem;
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.1rem;
+  --h2-font-size: 1.15rem;
+  --h3-font-size: 1.05rem;
+  --normal-font-size: .9rem;
+  --small-font-size: 0.8rem;
+  --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
+  --font-medium: 600;
+  --font-semi-bold: 800;
 
   /*========== Margenes ==========*/
   --mb-1: 0.5rem;
@@ -47,135 +47,136 @@ html {
   scroll-behavior: smooth;
 }
 
-/*========== Variables Dark theme ==========*/
-body.dark-theme {
-  --title-color: #f2f2f2;
-  --text-color: #bfbfbf;
-  --container-color: #212121;
-  --container-color-alt: #181616;
-  --body-color: #2b2b2b;
+/*========== Proměnné tmavy režim ==========*/
+body.tmavy-rezim {
+  --barva-titulku: #f1f1f1;
+  --barva-textu: #bebebe;
+  --barva-kontejneru: #222;
+  --barva-kontejneru-alt: #171515;
+  --body-color: #2c2c2c;
 }
-/*========== Button Dark/Light ==========*/
-.change-theme {
+/*========== Button tmavy/Light ==========*/
+.zmena-modu {
   position: absolute;
   right: 0;
   top: 2.2rem;
   display: flex;
-  color: var(--text-color);
+  color: var(--barva-textu);
   font-size: 1.2rem;
   cursor: pointer;
 }
 
-.change-theme:hover {
-  color: var(--title-color);
+.zmena-modu:hover {
+  color: var(--barva-titulku);
 }
-/*========== Font size variables to scale cv ==========*/
-.scale-cv .change-theme,
-.scale-cv .generate-pdf {
+/*========== Font size variables to zmensi cv ==========*/
+.zmensi-cv .zmena-modu,
+.zmensi-cv .generuj-pdf {
   display: none;
 }
 
-.scale-cv .bd-container {
+.zmensi-cv .body-kontejner {
   max-width: 595px;
 }
 
-.scale-cv .section {
-  padding: 1.5rem 0 0.8rem;
+.zmensi-cv .section {
+  padding: 1.75rem 0 0.8rem;
 }
 
-.scale-cv .section-title {
+.zmensi-cv .section-title {
   margin-bottom: 0.75rem;
 }
 
-.scale-cv .resume__left,
-.scale-cv .resume__right {
+.zmensi-cv .resume__levaStrana,
+.zmensi-cv .resume__pravaStrana {
   padding: 0 1rem;
 }
 
-.scale-cv .home__img {
+.zmensi-cv .home__obrazek {
   width: 90px;
   height: 90px;
 }
 
-.scale-cv .home__container {
-  gap: 1.5rem;
+.zmensi-cv .home__kontejner {
+  gap: 1.25rem;
 }
 
-.scale-cv .home__data {
+.zmensi-cv .home__data {
   gap: 0.25rem;
 }
 
-.scale-cv .home__address,
-.scale-cv .social__container {
-  gap: 0.75rem;
+.zmensi-cv .home__boxInfo,
+.zmensi-cv .social__kontejner {
+  gap: 0.5rem;
 }
 
-.scale-cv .home__icon,
-.scale-cv .social__icon,
-.scale-cv .interests__icon {
+
+.zmensi-cv .home__ikona,
+.zmensi-cv .social__ikona,
+.zmensi-cv .zajmy__ikona {
   font-size: 1rem;
 }
 
-.scale-cv .education__container,
-.scale-cv .experience__container,
-.scale-cv .certificate__container {
+.zmensi-cv .vzdelani__kontejner,
+.zmensi-cv .pracovniZkusenosti__kontejner,
+.zmensi-cv .certifikaty__kontejner {
   gap: 1rem;
 }
 
-.scale-cv .education__time,
-.scale-cv .experience__time {
+.zmensi-cv .vzdelani__casovaOsa,
+.zmensi-cv .pracovniZkusenosti__casovaOsa {
   padding-right: 0.5rem;
 }
 
-.scale-cv .education__rounder,
-.scale-cv .experience__rounder {
+.zmensi-cv .vzdelani__puntik,
+.zmensi-cv .pracovniZkusenosti__puntik {
   width: 11px;
   height: 11px;
   margin-top: 0.22rem;
 }
 
-.scale-cv .education__line,
-.scale-cv .experience__line {
+.zmensi-cv .vzdelani__linka,
+.zmensi-cv .pracovniZkusenosti__linka {
   width: 1px;
   height: 110%;
   transform: translate(5px, 0);
 }
 
-.scale-cv .education__data,
-.scale-cv .experience__data {
+.zmensi-cv .vzdelani__data,
+.zmensi-cv .pracovniZkusenosti__data {
   gap: 0.25rem;
 }
 
-.scale-cv .skills__name {
+.zmensi-cv .dovednosti__nazev {
   margin-bottom: var(--mb-1);
 }
 
-.scale-cv .interests__container {
-  column-gap: 0.25rem;
+.zmensi-cv .zajmy__kontejner {
+  column-gap: 1rem;
 }
 
-body {
-  --h1-font-size: 0.938rem;
-  --h2-font-size: 0.938rem;
-  --h3-font-size: 0.875rem;
-  --normal-font-size: 0.813rem;
-  --small-font-size: 0.75rem;
-  --smaller-font-size: 0.688rem;
+body.zmensi-cv  {
+  --h1-font-size: 1rem;
+  --h2-font-size: .88rem;
+  --h3-font-size: .85rem;
+  --normal-font-size: 0.7rem;
+  --small-font-size: 0.65rem;
+  --smaller-font-size: 0.55rem;
 }
 
-/*========== Generate PDF button ==========*/
-.generate-pdf {
+/*========== generuj PDF button ==========*/
+.generuj-pdf {
   display: none;
   position: absolute;
   top: 2.2rem;
   left: 0;
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: var(--barva-textu);
   cursor: pointer;
 }
 
-.generate-pdf:hover {
-  color: var(--title-color);
+.generuj-pdf:hover {
+  color: var(--barva-titulku);
 }
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
@@ -185,7 +186,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
-  color: var(--text-color);
+  color: var(--barva-textu);
 }
 
 h1,
@@ -199,7 +200,7 @@ p {
 h1,
 h2,
 h3 {
-  color: var(--title-color);
+  color: var(--barva-titulku);
   font-weight: var(--font-medium);
 }
 
@@ -224,27 +225,27 @@ img {
 
 .section-title {
   font-size: var(--h2-font-size);
-  color: var(--title-color) font-we var(--font-semi-bold);
+  color: var(--barva-titulku) font-we var(--font-semi-bold);
   text-transform: uppercase;
-  letter-spacing: 0.35rem;
+  letter-spacing: 0.25rem;
   text-align: center;
   margin-bottom: var(--mb-3);
 }
 
 /*========== LAYOUT ==========*/
-.bd-container {
+.body-kontejner {
   max-width: 968px;
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
 }
 
-.bd-grid {
+.grid {
   display: grid;
   gap: 1.5rem;
 }
 
-.l-header {
+.trida-hlavicka {
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -271,7 +272,7 @@ img {
     width: 100%;
     padding: 2rem 1.5rem;
     background-color: var(--body-color);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
     border-radius: 1rem 1rem 0 0;
     z-index: var(--z-fixed);
     transition: 0.3s;
@@ -280,7 +281,7 @@ img {
 
 .nav__logo,
 .nav__toggle {
-  color: var(--title-color);
+  color: var(--barva-titulku);
   font-weight: var(--font-medium);
 }
 
@@ -289,48 +290,48 @@ img {
   cursor: pointer;
 }
 
-.nav__item {
+.nav__polozka {
   text-align: center;
 }
 
-.nav__list {
+.nav__seznam {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.nav__link {
+.nav__odkaz {
   display: flex;
   flex-direction: column;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--barva-textu-light);
   font-weight: var(--font-medium);
 }
 
-.nav__link:hover {
-  color: var(--title-color);
+.nav__odkaz:hover {
+  color: var(--barva-titulku);
 }
 
-.nav__icon {
+.nav__ikona {
   font-size: 1.2rem;
   margin-bottom: var(--mb-1);
 }
 
-/* Show menu */
-.show-menu {
+/* Ukaž menu */
+.ukaz-menu {
   bottom: var(--header-height);
 }
-/* Active menu link */
-.active-link {
-  color: var(--title-color);
+/* Aktivní odkaz */
+.aktivni-odkaz {
+  color: var(--barva-titulku);
 }
 
-/*========== HOME ==========*/
+/*========== DOMŮ ==========*/
 .home {
   position: relative;
 }
 
-.home__container {
+.home__kontejner {
   gap: 3rem;
 }
 
@@ -339,42 +340,54 @@ img {
   text-align: center;
 }
 
-.home__img {
-  width: 120px;
-  height: 120px;
+.home__obrazek {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
 }
 
-.home__title {
-  font: var(--h1-font-size);
+.home__titulek {
+  font-size: var(--h1-font-size);
 }
 
-.home__profession {
+.home__profese {
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-1);
 }
 
-.home__address {
+.home__profese span{
+  font-weight: normal;
+  color: var(--barva-textu-light);
+}
+
+.home__boxInfo {
   gap: 1rem;
 }
 
-.home__information {
+.home__udaj {
   display: flex;
   align-items: center;
   font-size: var(--small-font-size);
 }
 
-.home__icon {
+.home__udaj a {
+  color:var(--barva-textu);;
+  cursor:auto;
+}
+
+
+
+.home__ikona {
   font-size: 1.2rem;
   margin-right: 0.25rem;
 }
 
-.home__button-movil {
+.home__tlacitko-cv {
   display: inline-block;
-  border: 2px solid var(--text-color);
-  color: var(--title-color);
+  border: 2px solid var(--barva-textu);
+  color: var(--barva-titulku);
   padding: 1rem 2rem;
   border-radius: 0.25rem;
   transition: 0.3s;
@@ -382,163 +395,150 @@ img {
   margin-top: var(--mb-3);
 }
 
-.home__button-mobil:hover {
-  background-color: var(--text-color);
-  color: var(--container-color);
+.home__tlacitko-cv:hover {
+  background-color: var(--barva-textu);
+  color: var(--barva-kontejneru);
 }
 
-/*========== SOCIAL ==========*/
-.social__container {
+/*========== SOCIÁLNÍ SÍTĚ ==========*/
+.social__kontejner {
   grid-template-columns: max-content;
 }
 
-.social__link {
+.social__odkaz {
   display: inline-flex;
   align-items: center;
   font-size: var(--small-font-size);
-  color: var(--text-color);
+  color: var(--barva-textu);
 }
 
-.social__link:hover {
-  color: var(--title-color);
+.social__odkaz:hover {
+  color: var(--barva-titulku);
 }
 
-.social__icon {
+.social__ikona {
   font-size: 1.2rem;
   margin-right: 0.25rem;
 }
 
-/*========== PROFILE ==========*/
-
-.profile__description {
-  text-align: center;
+/*========== O MĚ ==========*/
+.profile__popis {
+  text-align: left;
 }
 
-/*========== EDUCATION AND EXPERIENCE ==========*/
-.education__content,
-.experience__content {
+/*========== VZDĚLÁNÍ A PRACOVNÍ ZKUŠENOSTI ==========*/
+.vzdelani__obsah,
+.pracovniZkusenosti__obsah {
   display: flex;
 }
 
-.education__time,
-.experience__time {
+.vzdelani__casovaOsa,
+.pracovniZkusenosti__casovaOsa {
   padding-right: 1rem;
 }
 
-.education__rounder,
-.experience__rounder {
+.vzdelani__puntik,
+.pracovniZkusenosti__puntik {
   position: relative;
   display: block;
   width: 16px;
   height: 16px;
-  background-color: var(--text-color-light);
+  background-color: var(--barva-textu-light);
   border-radius: 50%;
   margin-top: 0.25rem;
 }
 
-.education__line,
-.experience__line {
+.vzdelani__linka,
+.pracovniZkusenosti__linka {
   display: block;
   width: 2px;
   height: 110%;
-  background-color: var(--text-color-light);
+  background-color: var(--barva-textu-light);
   transform: translate(7px, 0);
 }
 
-.education__data,
-.experience__data {
+.vzdelani__data,
+.pracovniZkusenosti__data {
   gap: 0.5rem;
 }
 
-.education__title,
-.experience__title {
+
+.vzdelani__titulek,
+.pracovniZkusenosti__titulek {
   font-size: var(--h3-font-size);
+  text-transform: uppercase;
 }
 
-.education__studies,
-.experience__company {
+.vzdelani__skola,
+.pracovniZkusenosti__dobaAspolecnost {
   font-size: var(--small-font-size);
-  color: var(--title-color);
+  color: var(--barva-titulku);
 }
 
-.education__year {
+.vzdelani__rok {
   font-size: var(--smaller-font-size);
 }
 
-/*========== SKILLS AND LANGUAGES ==========*/
-.skills__content,
-.languages__content {
+
+
+/*========== DOVEDNOSTI AND JAZYKY ==========*/
+.dovednosti__obsah,
+.jazyky__obsah {
   grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 }
 
-.skills__content {
+.dovednosti__obsah {
   gap: 0;
 }
 
-.languages__content {
+.jazyky__obsah {
   gap: 0;
 }
 
-.skills__name,
-.languages__name {
+.dovednosti__nazev,
+.jazyky__nazev {
   display: flex;
   align-items: center;
   margin-bottom: var(--mb-3);
 }
 
-.skills__circle,
-.languages__circle {
+.dovednosti__puntik,
+.jazyky__puntik {
   display: inline-block;
   width: 5px;
   height: 5px;
-  background-color: var(--text-color);
+  background-color: var(--barva-textu);
   border-radius: 50%;
-  margin-right: 0.75rem;
+  margin-right: 0.7rem;
 }
 
-/*========== CERTIFICATES ==========*/
-.certificate__title {
+/*========== CERTIFIKÁTY ==========*/
+.certifikaty__titulek {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
 }
 
-/*========== REFERENCES ==========*/
-.references__content {
-  gap: 0.25rem;
-}
 
-.references__subtitle {
-  color: var(--text-color-light);
-}
+/*========== ZÁJMY ==========*/
 
-.references__subtitle,
-.references__contact {
-  font-size: var(--smaller-font-size);
-}
-
-.certificate__title {
-  font-size: var(--h3-font-size);
-}
-
-/*========== INTERESTS ==========*/
-
-.interests__container {
-  grid-template-columns: repeat(3, 1fr);
+.zajmy__kontejner {
+  grid-template-columns: repeat(2, 1fr);
   margin-top: var(--mb-2);
 }
 
-.interests__content {
+.zajmy__obsah {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.interests__icon {
+.zajmy__ikona {
   font-size: 1.5rem;
-  color: var(--text-color-light);
+  color: var(--barva-textu-light);
 }
 
-/* Scroll top */
+/* Scroll top ikonka */
 
 .scrolltop {
   position: fixed;
@@ -548,7 +548,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
-  background-color: var(--container-color-alt);
+  background-color: var(--barva-kontejneru-alt);
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
 
@@ -556,37 +556,37 @@ img {
   visibility: hidden;
 }
 
-.scrolltop__icon {
+.scrolltop__ikona {
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: var(--barva-textu);
 }
 
-.show-scroll {
+.ukaz-scroll {
   bottom: 5rem;
   visibility: visible;
 }
 /*========== MEDIA QUERIES ==========*/
-/* For small devices, menu two columns */
 
+/* Pro malé zařízení, menu ve 2 sloupcích */
 @media screen and (max-width: 320px) {
-  .nav__list {
+  .nav__seznam {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 0.5rem;
   }
 }
 
-/* Classes modified for large screen size */
+/* Upravené styly pro zařízení větší než 968px */
 @media screen and (min-width: 968px) {
   body {
     margin: 3rem 0;
   }
 
-  .bd-container {
+  .body-kontejner {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .l-header,
+  .trida-hlavicka,
   .scrolltop {
     display: none;
   }
@@ -594,46 +594,44 @@ img {
   .resume {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
-    background-color: var(--container-color);
+    background-color: var(--barva-kontejneru);
     box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
   }
 
-  .resume__left {
-    background-color: var(--container-color-alt);
+  .resume__levaStrana {
+    background-color: var(--barva-kontejneru-alt);
   }
 
-  .resume__left,
-  .resume__right {
+  .resume__levaStrana,
+  .resume__pravaStrana {
     padding: 0 1.5rem;
   }
 
-  .generate-pdf {
+  .generuj-pdf {
     display: inline-block;
   }
 
   .section-title,
-  .profile__description {
+  .profile__popis {
     text-align: initial;
   }
 
-  .home__container {
+  .home__kontejner {
     gap: 1.5rem;
   }
 
-  .home__button-movil {
+  .home__tlacitko-cv {
     display: none;
   }
 
-  .references__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  .languages__content {
+
+  .jazyky__obsah {
     grid-template-columns: repeat(3, max-content);
     column-gap: 3.5rem;
   }
 
-  .interests__container {
+  .zajmy__kontejner {
     grid-template-columns: repeat(4, max-content);
     column-gap: 3.5rem;
   }
