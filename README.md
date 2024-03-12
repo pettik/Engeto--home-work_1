@@ -1,4 +1,4 @@
-# EN: ENGETO.CZ - #1 Homework - Responsive Resume
+# EN: ENGETO.CZ - #1 Homework - Curriculum Vitae
 
 ## Task Assignment
 ### Bonus Homework - Custom Resume
